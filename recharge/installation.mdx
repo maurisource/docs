@@ -1,0 +1,64 @@
+---
+title: 'Installation'
+description: 'An Adobe Commerce Integration'
+---
+
+<Info>
+  **Prerequisite** You should have a Stripe account and a Recharge Payment account.
+</Info>
+
+Step 1. Pull the Recharge-Payment module using composer
+
+<CodeGroup>
+
+```bash Marketplace
+composer require maurisource/recharge-payments
+```
+
+```bash Gitlab
+composer config repositories.13743571 composer https://gitlab.com/api/v4/group/13743571/-/packages/composer/packages.json
+composer config gitlab-token.gitlab.com gitlab+[deploy-token-username] [gldt-deploy-token-secret]
+composer require maurisource/recharge-payments
+
+```
+
+</CodeGroup>
+
+Step 2. Install command
+
+```bash
+php bin/magento setup:upgrade
+```
+
+
+## Stripe Module
+
+<Tip>
+  Installation of the Recharge-Payments module also installs the official Stripe-Payment module if you don't have it already.
+  Make sure you add it to your account in Magento if you haven't already.
+</Tip>
+
+You should see the following if the deploy successfully went through:
+
+<Frame>
+  <a href="https://google.ca/">
+    <img src="/images/AdobeStock_392551787_Editorial_Use_Only-718x523.jpeg" style={{ borderRadius: '0.5rem' }} /> 
+  </a>
+</Frame>
+Image: © MichaelVi/Stock.adobe.com
+
+## Troubleshooting FAQ
+
+Here's how to solve some common problems when working with the CLI.
+
+<AccordionGroup>
+  <Accordion title="Can't find package">
+    Make sure an auth.json file has been created with credentials for required repositories. Then pull the package with composer again.
+  </Accordion>
+  <Accordion title="Cache Invalidate">
+Run `php bin/magento cache:flush` specially after updating configuration settings from admin.
+  </Accordion>
+  <Accordion title="Getting an unknown error">
+    Try navigating to the root of your Magento environment and go to var/log. Check latest entries in logs files to help you trace the unknown error.
+  </Accordion>
+</AccordionGroup>
