@@ -1,0 +1,36 @@
+---
+title: 'Flow'
+description: 'An Adobe Commerce Integration'
+---
+
+
+### Overview
+The Maurisource_RechargePayments module helps manage product syncing and recurring orders with RechargePayments, using Stripe keys for payments.
+
+### Setup Requirements
+- **Stripe Payment Method:** You need to set up Stripe as the payment method for the module to work.
+
+### How It Works
+
+#### Product Management
+
+##### Adding or Updating Products
+- When you add or update a product, the module creates a task to sync it with RechargePayments.
+- A background process (cron job) regularly checks for new products and updates them on RechargePayments. It also updates the product's status once it's successfully synced.
+
+##### Deleting Products
+- To remove a product from RechargePayments, you disable its subscription. This triggers a task to delete the product from RechargePayments. Once deleted, the module updates the status accordingly.
+
+#### Order Management
+
+##### Creating Orders
+- Whenever a new order is placed, the module prepares it for RechargePayments. It ensures the order is authorized for processing.
+- A scheduled task monitors these orders, authorizing them on RechargePayments once confirmed. It retries a few times in case of errors.
+
+##### Order Payments
+- When an invoice is generated and paid, the module captures the payment in RechargePayments. This completes the payment process for the order.
+
+#### Refunds
+
+##### Processing Refunds
+- If a refund is requested, the module handles it by initiating a refund request through RechargePayments. Once processed successfully, it updates the refund status.

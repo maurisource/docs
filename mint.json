@@ -1,78 +1,68 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Adobe Commerce Integrations built by Adobe Solution Partner Maurisource Inc.",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/Maurisource_red_logo.webp",
+    "light": "/logo/Maurisource_red_logo.webp"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/logo/maurisourrece-M-favicon.gif",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
-    "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
-    }
+    "primary": "#fe5850",
+    "light": "#fe5850",
+    "dark": "#fe5850"
   },
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "mailto:support@maurisource.zendesk.com"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "Auth Endpoint",
+    "url": "https://auth.maurisource.com"
   },
+  "primaryTab": {
+    "name": "Home"
+},
   "tabs": [
     {
-      "name": "API Reference",
-      "url": "api-reference"
+      "name": "Lightspeed (R-Series)",
+      "url": "lightspeed"
+    },
+    {
+      "name": "Recharge (Payments)",
+      "url": "recharge"
     }
   ],
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "name": "Maurisource Website",
+      "icon": "house-fire",
+      "url": "https://maurisource.com/"
     },
     {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "name": "API Integrations",
+      "icon": "puzzle-piece",
+      "url": "https://maurisource.com/magento-api/"
     }
   ],
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
+      "pages": ["introduction", "development"]
     },
     {
-      "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
+      "group": "Lightspeed Integration",
+      "pages": ["lightspeed/installation", "lightspeed/flow", "lightspeed/configuration"]
     },
     {
-      "group": "API Documentation",
-      "pages": ["api-reference/introduction"]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
-      ]
+      "group": "Recharge Integration",
+      "pages": ["recharge/installation", "recharge/flow", "recharge/configuration"]
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "twitter": "https://x.com/MaurisourceInc",
+    "github": "https://github.com/maurisource",
+    "linkedin": "https://www.linkedin.com/company/maurisource"
   }
 }
